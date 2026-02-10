@@ -2,6 +2,7 @@ from django.shortcuts import render
 import json
 
 def showdata(request):
+    temp = None
     if request.method=='POST':
         data = json.loads(request.body)
 
