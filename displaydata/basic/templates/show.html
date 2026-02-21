@@ -9,5 +9,14 @@
     <div class="tempu">
         <strong>Temp</strong>: {{ temp }}
     </div>
+    <form method="POST" action="/set-command/">
+        {% csrf_token %}
+        <button name="command" value="F">Forward</button>
+        <button name="command" value="B">Backward</button>
+        <button name="command" value="L">left</button>
+        <button name="command" value="R">Right</button>
+        <button name="command" value="S">Stop</button>
+    </form>
+
 </body>
 </html>
