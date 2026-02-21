@@ -19,6 +19,8 @@ def showdata(request):
         temp = data.get('temperature')
         
         print("temp", temp)
-        return JsonResponse({"cmd":current_cmd})
+    if request.method == 'GET':
+        return JsonResponse({"cmd": current_cmd})
+
     return render(request,'show.html',{"temp":temp})
 
